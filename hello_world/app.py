@@ -1,5 +1,5 @@
 import json
-
+import psycopg2
 
 def lambda_handler(event, context):
     """Sample pure Lambda function
@@ -22,12 +22,17 @@ def lambda_handler(event, context):
 
         Return doc: https://docs.aws.amazon.com/apigateway/latest/developerguide/set-up-lambda-proxy-integrations.html
     """
-
+    conn_string = "dbname='sam-postgres-db' port='5432' user='postgres' password='9812376024' host='RDSEndpoint'"
+    conn = psycopg2.connect(conn_string)
+    cursor = conn.cursor()
+    cursor.execute("SELECT * FROM hello_table;")
+    a=cursor.fetchone()
+    print("working")
     return {
         "statusCode": 200,
         "body": json.dumps(
             {
-                "message": "hello world",
+                "message": "bye bye",
             }
         ),
     }
