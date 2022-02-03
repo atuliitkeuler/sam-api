@@ -22,7 +22,7 @@ def lambda_handler(event, context):
 
         Return doc: https://docs.aws.amazon.com/apigateway/latest/developerguide/set-up-lambda-proxy-integrations.html
     """
-    conn_string = "dbname='sam-postgres-db' port='5432' user='postgres' password='9812376024' host='RDSEndpoint'"
+    conn_string = "dbname='postgres' port='5432' user='postgres' password='9812376024' host='sam-postgres-db'"
     conn = psycopg2.connect(conn_string)
     cursor = conn.cursor()
     cursor.execute("SELECT * FROM hello_table;")
