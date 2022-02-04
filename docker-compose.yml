@@ -1,16 +1,17 @@
 version: '2'
 services:
-  sam-postgres-db:
-    image: postgres:10.5-alpine
-    container_name: sam-postgres-db
+  atul-postgres-db:
+    image: postgres
+    container_name: atul-postgres-db
     environment:
       - POSTGRES_PASSWORD=9812376024
     ports:
       - '5432:5432'
     networks:
-      martzcodes:
+      host:
     volumes:
       - ./init.sql:/docker-entrypoint-initdb.d/init.sql
 
 networks:
-  martzcodes:
+  host:
+  
