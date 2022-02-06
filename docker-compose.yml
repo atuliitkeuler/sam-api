@@ -5,6 +5,8 @@ services:
     container_name: atul-postgres-db
     environment:
       - POSTGRES_PASSWORD=9812376024
+      - POSTGRES_DB=postgres
+      - POSTGRES_USER=postgres
     ports:
       - '5432:5432'
     networks:
