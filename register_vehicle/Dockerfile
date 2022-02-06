@@ -1,6 +1,6 @@
 FROM public.ecr.aws/lambda/python:3.8
 
-COPY register_vehicle_function.py requirements.txt ./
+COPY register_vehicle_function.py requirements.txt TABLES.py CHILD_PARENT.py ./
 
 RUN python3.8 -m pip install -r requirements.txt -t .
 
