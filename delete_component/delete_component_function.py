@@ -27,7 +27,7 @@ def lambda_handler(event, context):
                     """).format(choosen_table=sql.Identifier(table_name))'''
     
 
-    msg={"message":"Vehicle Deleted Successfully with following EMCH number: %s"%(emch_number)}
+    msg={"message":"%s Component Deleted Successfully with following EMCH number: %s"%(table_name, emch_number)}
 
     return {
         "statusCode": 200,

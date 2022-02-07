@@ -42,7 +42,7 @@ def lambda_handler(event, context):
 
     
 
-    msg={"message":"Vehicle Added Successfully with following EMCH number: %s"%(emch_number)}
+    msg={"message":"%s Component Added Successfully with following EMCH number: %s"%(table_name, emch_number)}
 
     return {
         "statusCode": 200,

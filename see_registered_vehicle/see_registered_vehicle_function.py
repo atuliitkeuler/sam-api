@@ -2,16 +2,19 @@ import json
 import psycopg2
 
 def lambda_handler(event, context):
+    #body = json.loads(event.get("body", "{}"))
+    print(event)
+    emch_number=event['queryStringParameters']['emch']
     dbquery="""
-                SELECT * FROM vehicles
+                SELECT emch FROM vehicles
             """
     conn = psycopg2.connect(user='postgres', password='9812376024', host='172.19.0.2', port=5432, dbname='postgres')
     cur = conn.cursor()
     cur.execute(dbquery)
-    vehicle=cur.fetchall()
+    vehicles_registered=cur.fetchall()
+    print(vehicles_registered)
 
-    vehicle_columns=["id","created_at","updated_at","lot","unit","biw","power_train","semi_sprung_assembly","rear_suspension_assembly","driveshaft_assembly","fork_and_suspension_assembly","disc_brake_assembly","rear_wheel_assembly","front_wheel_assembly","brake_pedal_assembly","vehicle_harness","mark","battery_assembly","cocktail_box_assembly","telematics","load_body"]
-    response=[]
+    '''response=[]
 
     for i in range(len(vehicle)):
         part_res={}
@@ -20,9 +23,9 @@ def lambda_handler(event, context):
                 part_res[vehicle_columns[j]]=vehicle[i][j].isoformat()
             else:
                 part_res[vehicle_columns[j]]=vehicle[i][j]
-        response.append(part_res)
+        response.append(part_res)'''
     
-    msg={"message":res}
+    msg=vehicles_registered
 
     return {
         "statusCode": 200,
