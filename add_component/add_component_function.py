@@ -25,7 +25,7 @@ def lambda_handler(event, context):
                        SET {column_name}=(%s)
                        WHERE emch=(%s);
                        """).format(choosen_table=sql.Identifier(table_name),column_name=sql.Identifier(column_names[i]))
-        cur.execute(dbquery,(emch_number,))
+        cur.execute(dbquery,(column_entries[i],emch_number,))
         conn.commit()
 
     
