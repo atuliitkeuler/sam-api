@@ -46,7 +46,7 @@ Resources:
       DockerContext: ./register_vehicle
       DockerTag: python3.8-v1
 
-  SeeRegisteredVehicleFunction:
+  AddComponentFunction:
     Type: AWS::Serverless::Function # More info about Function Resource: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessfunction
     Properties:
       PackageType: Image
@@ -56,11 +56,11 @@ Resources:
         RegisterVehicle:
           Type: Api # More info about API Event Source: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#api
           Properties:
-            Path: /registeredvehicle
-            Method: get
+            Path: /addcomponent
+            Method: post
     Metadata:
       Dockerfile: Dockerfile
-      DockerContext: ./see_registered_vehicle
+      DockerContext: ./add_component
       DockerTag: python3.8-v1
   
   

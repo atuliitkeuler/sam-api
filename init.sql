@@ -467,13 +467,13 @@ CREATE TABLE powertrains (
         muff_cup uuid,
         FOREIGN KEY(gearbox) 
             REFERENCES gearboxes(id)
-                ON DELETE NO ACTION ON UPDATE CASCADE,
+                ON DELETE SET NULL ON UPDATE CASCADE,
         FOREIGN KEY(motor) 
             REFERENCES motors(id)
-                ON DELETE NO ACTION ON UPDATE CASCADE,
+                ON DELETE SET NULL ON UPDATE CASCADE,
         FOREIGN KEY(muff_cup) 
             REFERENCES muff_cups(id)
-                ON DELETE NO ACTION ON UPDATE CASCADE
+                ON DELETE SET NULL ON UPDATE CASCADE
         );
 
 
@@ -493,16 +493,16 @@ CREATE TABLE semi_sprung_assemblies (
         hub_assembly uuid,
         FOREIGN KEY(trailing_arm) 
             REFERENCES trailing_arms(id)
-                ON DELETE NO ACTION ON UPDATE CASCADE,
+                ON DELETE SET NULL ON UPDATE CASCADE,
         FOREIGN KEY(drum) 
             REFERENCES drums(id)
-                ON DELETE NO ACTION ON UPDATE CASCADE,
+                ON DELETE SET NULL ON UPDATE CASCADE,
         FOREIGN KEY(brake_plate) 
             REFERENCES brake_plates(id)
-                ON DELETE NO ACTION ON UPDATE CASCADE,
+                ON DELETE SET NULL ON UPDATE CASCADE,
         FOREIGN KEY(hub_assembly) 
             REFERENCES hub_assemblies(id)
-                ON DELETE NO ACTION ON UPDATE CASCADE
+                ON DELETE SET NULL ON UPDATE CASCADE
         );
 
 CREATE TABLE rear_suspension_assemblies (
@@ -518,13 +518,13 @@ CREATE TABLE rear_suspension_assemblies (
     	mounting_rubber uuid,
         FOREIGN KEY(spring) 
             REFERENCES springs(id)
-                ON DELETE NO ACTION ON UPDATE CASCADE,
+                ON DELETE SET NULL ON UPDATE CASCADE,
         FOREIGN KEY(strut) 
             REFERENCES struts(id)
-                ON DELETE NO ACTION ON UPDATE CASCADE,
+                ON DELETE SET NULL ON UPDATE CASCADE,
         FOREIGN KEY(mounting_rubber) 
             REFERENCES mounting_rubbers(id)
-                ON DELETE NO ACTION ON UPDATE CASCADE
+                ON DELETE SET NULL ON UPDATE CASCADE
         );
 
 CREATE TABLE driveshaft_assemblies(
@@ -539,10 +539,10 @@ CREATE TABLE driveshaft_assemblies(
      	crown_nut uuid,
         FOREIGN KEY(rear_axle) 
             REFERENCES rear_axles(id)
-                ON DELETE NO ACTION ON UPDATE CASCADE,
+                ON DELETE SET NULL ON UPDATE CASCADE,
         FOREIGN KEY(crown_nut) 
             REFERENCES crown_nuts(id)
-                ON DELETE NO ACTION ON UPDATE CASCADE
+                ON DELETE SET NULL ON UPDATE CASCADE
         );
 
 CREATE TABLE fork_and_suspension_assemblies (
@@ -560,19 +560,19 @@ CREATE TABLE fork_and_suspension_assemblies (
         strut uuid,
         FOREIGN KEY(upper_and_lower_cone) 
             REFERENCES upper_and_lower_cones(id)
-                ON DELETE NO ACTION ON UPDATE CASCADE,
+                ON DELETE SET NULL ON UPDATE CASCADE,
         FOREIGN KEY(fork_2_bearing) 
             REFERENCES fork_2_bearings(id)
-                ON DELETE NO ACTION ON UPDATE CASCADE,
+                ON DELETE SET NULL ON UPDATE CASCADE,
         FOREIGN KEY(bottom_link) 
             REFERENCES bottom_links(id)
-                ON DELETE NO ACTION ON UPDATE CASCADE,
+                ON DELETE SET NULL ON UPDATE CASCADE,
         FOREIGN KEY(spring)
             REFERENCES springs(id)
-                ON DELETE NO ACTION ON UPDATE CASCADE,
+                ON DELETE SET NULL ON UPDATE CASCADE,
         FOREIGN KEY(strut) 
             REFERENCES struts(id)
-                ON DELETE NO ACTION ON UPDATE CASCADE
+                ON DELETE SET NULL ON UPDATE CASCADE
         );
 
 CREATE TABLE disc_brake_assemblies (
@@ -587,10 +587,10 @@ CREATE TABLE disc_brake_assemblies (
     	caliper uuid,
         FOREIGN KEY(rotor) 
             REFERENCES rotors(id)
-                ON DELETE NO ACTION ON UPDATE CASCADE,
+                ON DELETE SET NULL ON UPDATE CASCADE,
         FOREIGN KEY(caliper) 
             REFERENCES calipers(id)
-                ON DELETE NO ACTION ON UPDATE CASCADE
+                ON DELETE SET NULL ON UPDATE CASCADE
         );
 
 
@@ -606,10 +606,10 @@ CREATE TABLE rear_wheel_assemblies (
      	rim uuid,
         FOREIGN KEY(tyre) 
             REFERENCES tyres(id)
-                ON DELETE NO ACTION ON UPDATE CASCADE,
+                ON DELETE SET NULL ON UPDATE CASCADE,
         FOREIGN KEY(rim) 
             REFERENCES rims(id)
-                ON DELETE NO ACTION ON UPDATE CASCADE
+                ON DELETE SET NULL ON UPDATE CASCADE
         );
 
 
@@ -625,10 +625,10 @@ CREATE TABLE front_wheel_assemblies (
      	rim uuid,
         FOREIGN KEY(tyre) 
             REFERENCES tyres(id)
-                ON DELETE NO ACTION ON UPDATE CASCADE,
+                ON DELETE SET NULL ON UPDATE CASCADE,
         FOREIGN KEY(rim) 
             REFERENCES rims(id)
-                ON DELETE NO ACTION ON UPDATE CASCADE
+                ON DELETE SET NULL ON UPDATE CASCADE
         );
 
 
@@ -646,13 +646,13 @@ CREATE TABLE brake_pedal_assemblies  (
         brake_switch uuid,
         FOREIGN KEY(tmc) 
             REFERENCES tmcs(id)
-                ON DELETE NO ACTION ON UPDATE CASCADE,
+                ON DELETE SET NULL ON UPDATE CASCADE,
         FOREIGN KEY(reservoir) 
             REFERENCES reservoirs(id)
-                ON DELETE NO ACTION ON UPDATE CASCADE,
+                ON DELETE SET NULL ON UPDATE CASCADE,
         FOREIGN KEY(brake_switch) 
             REFERENCES brake_switches(id)
-                ON DELETE NO ACTION ON UPDATE CASCADE
+                ON DELETE SET NULL ON UPDATE CASCADE
         );
 
 
@@ -697,19 +697,19 @@ CREATE TABLE battery_assemblies  (
       	signal_connector uuid ,
         FOREIGN KEY(cell) 
             REFERENCES cells(id)
-                ON DELETE NO ACTION ON UPDATE CASCADE,
+                ON DELETE SET NULL ON UPDATE CASCADE,
         FOREIGN KEY(bms) 
             REFERENCES bmses(id)
-                ON DELETE NO ACTION ON UPDATE CASCADE,
+                ON DELETE SET NULL ON UPDATE CASCADE,
         FOREIGN KEY(battery)
             REFERENCES batteries(id)
-                ON DELETE NO ACTION ON UPDATE CASCADE,
+                ON DELETE SET NULL ON UPDATE CASCADE,
         FOREIGN KEY(battery_box) 
             REFERENCES battery_boxes(id)
-                ON DELETE NO ACTION ON UPDATE CASCADE,
+                ON DELETE SET NULL ON UPDATE CASCADE,
         FOREIGN KEY(signal_connector) 
             REFERENCES signal_connectors(id)
-                ON DELETE NO ACTION ON UPDATE CASCADE  
+                ON DELETE SET NULL ON UPDATE CASCADE  
         );
 
 CREATE TABLE cocktail_box_assemblies (
@@ -729,25 +729,25 @@ CREATE TABLE cocktail_box_assemblies (
         arc_reactor_assembly uuid,
           FOREIGN KEY(cocktail_box) 
               REFERENCES cocktail_boxes(id)
-                  ON DELETE NO ACTION ON UPDATE CASCADE,
+                  ON DELETE SET NULL ON UPDATE CASCADE,
           FOREIGN KEY(aux_battery) 
               REFERENCES aux_batteries(id)
-                  ON DELETE NO ACTION ON UPDATE CASCADE,
+                  ON DELETE SET NULL ON UPDATE CASCADE,
           FOREIGN KEY(motor_controller) 
               REFERENCES motor_controllers(id)   
-                  ON DELETE NO ACTION ON UPDATE CASCADE,
+                  ON DELETE SET NULL ON UPDATE CASCADE,
           FOREIGN KEY(on_board_charger) 
               REFERENCES on_board_chargers(id)
-                  ON DELETE NO ACTION ON UPDATE CASCADE,
+                  ON DELETE SET NULL ON UPDATE CASCADE,
           FOREIGN KEY(dc_dc) 
               REFERENCES dc_dcs(id)
-                  ON DELETE NO ACTION ON UPDATE CASCADE,
+                  ON DELETE SET NULL ON UPDATE CASCADE,
           FOREIGN KEY(stark) 
               REFERENCES starks(id)
-                  ON DELETE NO ACTION ON UPDATE CASCADE,
+                  ON DELETE SET NULL ON UPDATE CASCADE,
           FOREIGN KEY(arc_reactor_assembly) 
               REFERENCES arc_reactor_assemblies(id)
-                  ON DELETE NO ACTION ON UPDATE CASCADE
+                  ON DELETE SET NULL ON UPDATE CASCADE
         );
 
 CREATE TABLE Telematics (
@@ -797,52 +797,52 @@ CREATE TABLE vehicles (
         load_body  uuid,
         FOREIGN KEY(biw) 
             REFERENCES biws(id)
-                ON DELETE NO ACTION ON UPDATE CASCADE,
+                ON DELETE SET NULL ON UPDATE CASCADE,
         FOREIGN KEY(power_train) 
             REFERENCES powertrains(id)
-                ON DELETE NO ACTION ON UPDATE CASCADE,
+                ON DELETE SET NULL ON UPDATE CASCADE,
         FOREIGN KEY(semi_sprung_assembly) 
             REFERENCES semi_sprung_assemblies(id)
-                ON DELETE NO ACTION ON UPDATE CASCADE,
+                ON DELETE SET NULL ON UPDATE CASCADE,
         FOREIGN KEY(rear_suspension_assembly) 
             REFERENCES rear_suspension_assemblies(id)
-                ON DELETE NO ACTION ON UPDATE CASCADE,
+                ON DELETE SET NULL ON UPDATE CASCADE,
         FOREIGN KEY(driveshaft_assembly) 
             REFERENCES driveshaft_assemblies(id)
-                ON DELETE NO ACTION ON UPDATE CASCADE,
+                ON DELETE SET NULL ON UPDATE CASCADE,
         FOREIGN KEY(fork_and_suspension_assembly) 
             REFERENCES fork_and_suspension_assemblies(id)
-                ON DELETE NO ACTION ON UPDATE CASCADE,
+                ON DELETE SET NULL ON UPDATE CASCADE,
         FOREIGN KEY(disc_brake_assembly) 
             REFERENCES disc_brake_assemblies(id)
-                ON DELETE NO ACTION ON UPDATE CASCADE,
+                ON DELETE SET NULL ON UPDATE CASCADE,
         FOREIGN KEY(rear_wheel_assembly) 
             REFERENCES rear_wheel_assemblies(id)
-                ON DELETE NO ACTION ON UPDATE CASCADE,
+                ON DELETE SET NULL ON UPDATE CASCADE,
         FOREIGN KEY(front_wheel_assembly) 
             REFERENCES front_wheel_assemblies(id)
-                ON DELETE NO ACTION ON UPDATE CASCADE,
+                ON DELETE SET NULL ON UPDATE CASCADE,
         FOREIGN KEY(brake_pedal_assembly) 
             REFERENCES brake_pedal_assemblies(id)
-                ON DELETE NO ACTION ON UPDATE CASCADE,
+                ON DELETE SET NULL ON UPDATE CASCADE,
         FOREIGN KEY(vehicle_harness) 
             REFERENCES vehicle_harnesses(id)
-                ON DELETE NO ACTION ON UPDATE CASCADE,
+                ON DELETE SET NULL ON UPDATE CASCADE,
         FOREIGN KEY(mark) 
             REFERENCES marks(id)
-                ON DELETE NO ACTION ON UPDATE CASCADE,
+                ON DELETE SET NULL ON UPDATE CASCADE,
         FOREIGN KEY(battery_assembly) 
             REFERENCES battery_assemblies(id)
-                ON DELETE NO ACTION ON UPDATE CASCADE,
+                ON DELETE SET NULL ON UPDATE CASCADE,
         FOREIGN KEY(cocktail_box_assembly) 
             REFERENCES cocktail_box_assemblies(id)
-                ON DELETE NO ACTION ON UPDATE CASCADE,
+                ON DELETE SET NULL ON UPDATE CASCADE,
         FOREIGN KEY(telematics) 
             REFERENCES Telematics(id)
-                ON DELETE NO ACTION ON UPDATE CASCADE,
+                ON DELETE SET NULL ON UPDATE CASCADE,
         FOREIGN KEY(load_body) 
             REFERENCES load_bodies(id)
-                ON DELETE NO ACTION ON UPDATE CASCADE
+                ON DELETE SET NULL ON UPDATE CASCADE
 );
 
 
