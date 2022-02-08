@@ -1,9 +1,11 @@
 #level ={table_name: [(name of foreign key in table_name,
 #                       corresponding table to which this foreign key belongs)]}
 
+
 level1={
     'vehicles':[('biw', 'biws'), ('power_train', 'powertrains'), ('semi_sprung_assembly', 'semi_sprung_assemblies'), ('rear_suspension_assembly', 'rear_suspension_assemblies'), ('driveshaft_assembly', 'driveshaft_assemblies'), ('fork_and_suspension_assembly', 'fork_and_suspension_assemblies'), ('disc_brake_assembly', 'disc_brake_assemblies'), ('rear_wheel_assembly', 'rear_wheel_assemblies'), ('front_wheel_assembly', 'front_wheel_assemblies'), ('brake_pedal_assembly', 'brake_pedal_assemblies'), ('vehicle_harness', 'vehicle_harnesses'), ('mark', 'marks'), ('battery_assembly', 'battery_assemblies'), ('cocktail_box_assembly', 'cocktail_box_assemblies'), ('telematics', 'telematics'), ('load_body', 'load_bodies')]
     }
+
 
 level2={
     'cocktail_box_assemblies':[('cocktail_box', 'cocktail_boxes'), ('aux_battery', 'aux_batteries'), ('motor_controller', 'motor_controllers'), ('on_board_charger', 'on_board_chargers'), ('dc_dc', 'dc_dcs'), ('stark', 'starks'), ('arc_reactor_assembly', 'arc_reactor_assemblies')],

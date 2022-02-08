@@ -24,19 +24,15 @@ def lambda_handler(event, context):
 
         Return doc: https://docs.aws.amazon.com/apigateway/latest/developerguide/set-up-lambda-proxy-integrations.html
     """
-    
 
-    '''conn = psycopg2.connect(user='postgres', password='9812376024', host='172.19.0.2', port=5432, dbname='postgres')
+    """conn = psycopg2.connect(user='postgres', password='9812376024', host='172.19.0.2', port=5432, dbname='postgres')
     cur = conn.cursor()
     cur.execute(dbquery2)
-    conn.commit()'''
-    #cur.execute("INSERT INTO hello_atul_new (hello_source, hello_target) VALUES ('w', 'sdf');")
-    #new_message=cur.fetchall()
+    conn.commit()"""
+    # cur.execute("INSERT INTO hello_atul_new (hello_source, hello_target) VALUES ('w', 'sdf');")
+    # new_message=cur.fetchall()
 
-    #msg={"message":new_message[0]}
-    msg={"message":"bye bye"}
+    # msg={"message":new_message[0]}
+    msg = {"message": "bye bye"}
 
-    return {
-        "statusCode": 200,
-        "body": json.dumps(msg)
-    }
+    return {"statusCode": 200, "body": json.dumps(msg)}

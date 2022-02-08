@@ -4,8 +4,8 @@ SELECT uuid_generate_v4();
 
 CREATE TABLE gearboxes (
         id uuid DEFAULT uuid_generate_v4() PRIMARY KEY,
+        
         gearbox_id VARCHAR(20),
-        emch VARCHAR(20) UNIQUE,
         created_at DATE DEFAULT CURRENT_DATE,
         updated_at DATE DEFAULT CURRENT_DATE,
         lot VARCHAR(20),
@@ -18,7 +18,7 @@ CREATE TABLE gearboxes (
 CREATE TABLE motors (
         id uuid DEFAULT uuid_generate_v4() PRIMARY KEY,
         motor_id VARCHAR(20),
-        emch VARCHAR(20) UNIQUE,
+        
         created_at DATE DEFAULT CURRENT_DATE,
         updated_at DATE DEFAULT CURRENT_DATE,
         lot VARCHAR(20),
@@ -31,7 +31,7 @@ CREATE TABLE motors (
 CREATE TABLE muff_cups (
         id uuid DEFAULT uuid_generate_v4() PRIMARY KEY,
         muff_cup_id VARCHAR(20),
-        emch VARCHAR(20) UNIQUE,
+        
         created_at DATE DEFAULT CURRENT_DATE,
         updated_at DATE DEFAULT CURRENT_DATE,
         lot VARCHAR(20),
@@ -43,7 +43,7 @@ CREATE TABLE muff_cups (
 CREATE TABLE trailing_arms (
         id uuid DEFAULT uuid_generate_v4() PRIMARY KEY,
         trailing_arm_id VARCHAR(20),
-        emch VARCHAR(20) UNIQUE,
+        
         created_at DATE DEFAULT CURRENT_DATE,
         updated_at DATE DEFAULT CURRENT_DATE,
         lot VARCHAR(20),
@@ -55,7 +55,7 @@ CREATE TABLE trailing_arms (
 CREATE TABLE drums (
         id uuid DEFAULT uuid_generate_v4() PRIMARY KEY,
         drum_id VARCHAR(20),
-        emch VARCHAR(20) UNIQUE,
+        
         created_at DATE DEFAULT CURRENT_DATE,
         updated_at DATE DEFAULT CURRENT_DATE,
         lot VARCHAR(20),
@@ -67,7 +67,7 @@ CREATE TABLE drums (
 CREATE TABLE brake_plates (
         id uuid DEFAULT uuid_generate_v4() PRIMARY KEY,
         brake_plate_id VARCHAR(20),
-        emch VARCHAR(20) UNIQUE,
+        
         created_at DATE DEFAULT CURRENT_DATE,
         updated_at DATE DEFAULT CURRENT_DATE,
         lot VARCHAR(20),
@@ -80,7 +80,7 @@ CREATE TABLE brake_plates (
 CREATE TABLE hub_assemblies (
         id uuid DEFAULT uuid_generate_v4() PRIMARY KEY,
         hub_assembly_id VARCHAR(20),
-        emch VARCHAR(20) UNIQUE,
+        
         created_at DATE DEFAULT CURRENT_DATE,
         updated_at DATE DEFAULT CURRENT_DATE,
         lot VARCHAR(20),
@@ -93,7 +93,7 @@ CREATE TABLE hub_assemblies (
 CREATE TABLE mounting_rubbers (
         id uuid DEFAULT uuid_generate_v4() PRIMARY KEY,
         mounting_rubber_id VARCHAR(20),
-        emch VARCHAR(20) UNIQUE,
+        
         created_at DATE DEFAULT CURRENT_DATE,
         updated_at DATE DEFAULT CURRENT_DATE,
         lot VARCHAR(20),
@@ -103,7 +103,7 @@ CREATE TABLE mounting_rubbers (
 CREATE TABLE rear_axles (
         id uuid DEFAULT uuid_generate_v4() PRIMARY KEY,
         rear_axle_id VARCHAR(20),
-        emch VARCHAR(20) UNIQUE,
+        
         created_at DATE DEFAULT CURRENT_DATE,
         updated_at DATE DEFAULT CURRENT_DATE,
         lot VARCHAR(20),
@@ -117,7 +117,7 @@ CREATE TABLE rear_axles (
 CREATE TABLE crown_nuts (
         id uuid DEFAULT uuid_generate_v4() PRIMARY KEY,
         crown_nut_id VARCHAR(20),
-        emch VARCHAR(20) UNIQUE,
+        
         created_at DATE DEFAULT CURRENT_DATE,
         updated_at DATE DEFAULT CURRENT_DATE,
         lot VARCHAR(20),
@@ -130,7 +130,7 @@ CREATE TABLE crown_nuts (
 CREATE TABLE upper_and_lower_cones  (
         id uuid DEFAULT uuid_generate_v4() PRIMARY KEY,
         upper_and_lower_cone_id VARCHAR(20),
-        emch VARCHAR(20) UNIQUE,
+        
         created_at DATE DEFAULT CURRENT_DATE,
         updated_at DATE DEFAULT CURRENT_DATE,
         lot VARCHAR(20),
@@ -144,7 +144,7 @@ CREATE TABLE upper_and_lower_cones  (
 CREATE TABLE fork_2_bearings (
         id uuid DEFAULT uuid_generate_v4() PRIMARY KEY,
         for_2_bearing_id VARCHAR(20),
-        emch VARCHAR(20) UNIQUE,
+        
         created_at DATE DEFAULT CURRENT_DATE,
         updated_at DATE DEFAULT CURRENT_DATE,
         lot VARCHAR(20),
@@ -159,7 +159,7 @@ CREATE TABLE fork_2_bearings (
 CREATE TABLE bottom_links (
         id uuid DEFAULT uuid_generate_v4() PRIMARY KEY,
         bottom_link_id VARCHAR(20),
-        emch VARCHAR(20) UNIQUE,
+        
         created_at DATE DEFAULT CURRENT_DATE,
         updated_at DATE DEFAULT CURRENT_DATE,
         lot VARCHAR(20),
@@ -171,7 +171,7 @@ CREATE TABLE bottom_links (
 CREATE TABLE springs  (
         id uuid DEFAULT uuid_generate_v4() PRIMARY KEY,
         spring_id VARCHAR(20),
-        emch VARCHAR(20) UNIQUE,
+        
         created_at DATE DEFAULT CURRENT_DATE,
         updated_at DATE DEFAULT CURRENT_DATE,
         lot VARCHAR(20),
@@ -185,7 +185,7 @@ CREATE TABLE springs  (
 CREATE TABLE struts  (
         id uuid DEFAULT uuid_generate_v4() PRIMARY KEY,
         strut_id VARCHAR(20),
-        emch VARCHAR(20) UNIQUE,
+        
         created_at DATE DEFAULT CURRENT_DATE,
         updated_at DATE DEFAULT CURRENT_DATE,
         lot VARCHAR(20),
@@ -199,7 +199,7 @@ CREATE TABLE struts  (
 CREATE TABLE rotors  (
         id uuid DEFAULT uuid_generate_v4() PRIMARY KEY,
         rotor_id VARCHAR(20),
-        emch VARCHAR(20) UNIQUE,
+        
         created_at DATE DEFAULT CURRENT_DATE,
         updated_at DATE DEFAULT CURRENT_DATE,
         lot VARCHAR(20),
@@ -213,7 +213,7 @@ CREATE TABLE rotors  (
 CREATE TABLE calipers (
         id uuid DEFAULT uuid_generate_v4() PRIMARY KEY,
         caliper_id VARCHAR(20),
-        emch VARCHAR(20) UNIQUE,
+        
         created_at DATE DEFAULT CURRENT_DATE,
         updated_at DATE DEFAULT CURRENT_DATE,
         lot VARCHAR(20),
@@ -227,7 +227,7 @@ CREATE TABLE calipers (
 CREATE TABLE tyres  (
         id uuid DEFAULT uuid_generate_v4() PRIMARY KEY,
         tyre_id VARCHAR(20),
-        emch VARCHAR(20) UNIQUE,
+        
         created_at DATE DEFAULT CURRENT_DATE,
         updated_at DATE DEFAULT CURRENT_DATE,
         lot VARCHAR(20),
@@ -241,7 +241,7 @@ CREATE TABLE tyres  (
 CREATE TABLE rims  (
         id uuid DEFAULT uuid_generate_v4() PRIMARY KEY,
         rim_id VARCHAR(20),
-        emch VARCHAR(20) UNIQUE,
+        
         created_at DATE DEFAULT CURRENT_DATE,
         updated_at DATE DEFAULT CURRENT_DATE,
         lot VARCHAR(20),
@@ -255,7 +255,7 @@ CREATE TABLE rims  (
 CREATE TABLE tmcs  (
         id uuid DEFAULT uuid_generate_v4() PRIMARY KEY,
         tmc_id VARCHAR(20),
-        emch VARCHAR(20) UNIQUE,
+        
         created_at DATE DEFAULT CURRENT_DATE,
         updated_at DATE DEFAULT CURRENT_DATE,
         lot VARCHAR(20),
@@ -269,7 +269,7 @@ CREATE TABLE tmcs  (
 CREATE TABLE reservoirs  (
         id uuid DEFAULT uuid_generate_v4() PRIMARY KEY,
         reservoir_id VARCHAR(20),
-        emch VARCHAR(20) UNIQUE,
+        
         created_at DATE DEFAULT CURRENT_DATE,
         updated_at DATE DEFAULT CURRENT_DATE,
         lot VARCHAR(20),
@@ -283,7 +283,7 @@ CREATE TABLE reservoirs  (
 CREATE TABLE brake_switches  (
         id uuid DEFAULT uuid_generate_v4() PRIMARY KEY,
         brake_switch_id VARCHAR(20),
-        emch VARCHAR(20) UNIQUE,
+        
         created_at DATE DEFAULT CURRENT_DATE,
         updated_at DATE DEFAULT CURRENT_DATE,
         lot VARCHAR(20),
@@ -296,7 +296,7 @@ CREATE TABLE brake_switches  (
 CREATE TABLE cells  (
         id uuid DEFAULT uuid_generate_v4() PRIMARY KEY,
         cell_id VARCHAR(20),
-        emch VARCHAR(20) UNIQUE,
+        
         created_at DATE DEFAULT CURRENT_DATE,
         updated_at DATE DEFAULT CURRENT_DATE,
         lot VARCHAR(20),
@@ -310,7 +310,7 @@ CREATE TABLE cells  (
 CREATE TABLE bmses  (
         id uuid DEFAULT uuid_generate_v4() PRIMARY KEY,
         bms_id VARCHAR(20),
-        emch VARCHAR(20) UNIQUE,
+        
         created_at DATE DEFAULT CURRENT_DATE,
         updated_at DATE DEFAULT CURRENT_DATE,
         lot VARCHAR(20),
@@ -322,7 +322,7 @@ CREATE TABLE bmses  (
 CREATE TABLE battery_boxes (
         id uuid DEFAULT uuid_generate_v4() PRIMARY KEY,
         battery_box_id VARCHAR(20),
-        emch VARCHAR(20) UNIQUE,
+        
         created_at DATE DEFAULT CURRENT_DATE,
         updated_at DATE DEFAULT CURRENT_DATE,
         lot VARCHAR(20),
@@ -332,7 +332,7 @@ CREATE TABLE battery_boxes (
 CREATE TABLE batteries (
         id uuid DEFAULT uuid_generate_v4() PRIMARY KEY,
         bettery_id VARCHAR(20),
-        emch VARCHAR(20) UNIQUE,
+        
         created_at DATE DEFAULT CURRENT_DATE,
         updated_at DATE DEFAULT CURRENT_DATE,
         lot VARCHAR(20),
@@ -345,7 +345,7 @@ CREATE TABLE batteries (
 CREATE TABLE signal_connectors  (
         id uuid DEFAULT uuid_generate_v4() PRIMARY KEY,
         signal_connector_id VARCHAR(20),
-        emch VARCHAR(20) UNIQUE,
+        
         created_at DATE DEFAULT CURRENT_DATE,
         updated_at DATE DEFAULT CURRENT_DATE,
         lot VARCHAR(20),
@@ -358,7 +358,7 @@ CREATE TABLE signal_connectors  (
 CREATE TABLE cocktail_boxes  (
         id uuid DEFAULT uuid_generate_v4() PRIMARY KEY,
         cocktail_box_id VARCHAR(20),
-        emch VARCHAR(20) UNIQUE,
+        
         created_at DATE DEFAULT CURRENT_DATE,
         updated_at DATE DEFAULT CURRENT_DATE,
         lot VARCHAR(20),
@@ -370,7 +370,7 @@ CREATE TABLE cocktail_boxes  (
 CREATE TABLE aux_batteries(
         id uuid DEFAULT uuid_generate_v4() PRIMARY KEY,
         aux_battery_id VARCHAR(20),
-        emch VARCHAR(20) UNIQUE,
+        
         created_at DATE DEFAULT CURRENT_DATE,
         updated_at DATE DEFAULT CURRENT_DATE,
         lot VARCHAR(20),
@@ -381,7 +381,7 @@ CREATE TABLE aux_batteries(
 CREATE TABLE motor_controllers(
         id uuid DEFAULT uuid_generate_v4() PRIMARY KEY,
         motor_controller_id VARCHAR(20),
-        emch VARCHAR(20) UNIQUE,
+        
         created_at DATE DEFAULT CURRENT_DATE,
         updated_at DATE DEFAULT CURRENT_DATE,
         lot VARCHAR(20),
@@ -393,7 +393,7 @@ CREATE TABLE motor_controllers(
 CREATE TABLE on_board_chargers (
         id uuid DEFAULT uuid_generate_v4() PRIMARY KEY,
         on_board_charger_id VARCHAR(20),
-        emch VARCHAR(20) UNIQUE,
+        
         created_at DATE DEFAULT CURRENT_DATE,
         updated_at DATE DEFAULT CURRENT_DATE,
         lot VARCHAR(20),
@@ -405,7 +405,7 @@ CREATE TABLE on_board_chargers (
 CREATE TABLE dc_dcs (
         id uuid DEFAULT uuid_generate_v4() PRIMARY KEY,
         dc_dc_id VARCHAR(20),
-        emch VARCHAR(20) UNIQUE,
+        
         created_at DATE DEFAULT CURRENT_DATE,
         updated_at DATE DEFAULT CURRENT_DATE,
         lot VARCHAR(20),
@@ -418,7 +418,7 @@ CREATE TABLE dc_dcs (
 CREATE TABLE starks  (
         id uuid DEFAULT uuid_generate_v4() PRIMARY KEY,
         stark_id VARCHAR(20),
-        emch VARCHAR(20) UNIQUE,
+        
         created_at DATE DEFAULT CURRENT_DATE,
         updated_at DATE DEFAULT CURRENT_DATE,
         lot VARCHAR(20),
@@ -430,7 +430,7 @@ CREATE TABLE starks  (
 CREATE TABLE arc_reactor_assemblies  (
         id uuid DEFAULT uuid_generate_v4() PRIMARY KEY,
         arc_reactor_assembly_id VARCHAR(20),
-        emch VARCHAR(20) UNIQUE,
+        
         created_at DATE DEFAULT CURRENT_DATE,
         updated_at DATE DEFAULT CURRENT_DATE,
         lot VARCHAR(20),
@@ -447,7 +447,7 @@ CREATE TABLE arc_reactor_assemblies  (
 CREATE TABLE biws(
     id uuid DEFAULT uuid_generate_v4() PRIMARY KEY,
     biw_id VARCHAR(20),
-    emch VARCHAR(20) UNIQUE,
+    
     created_at DATE DEFAULT CURRENT_DATE,
     updated_at DATE DEFAULT CURRENT_DATE,
     lot VARCHAR(20),
@@ -457,12 +457,11 @@ CREATE TABLE biws(
 CREATE TABLE powertrains (
         id uuid DEFAULT uuid_generate_v4() PRIMARY KEY,
         powertrain_id VARCHAR(20),
-        emch VARCHAR(20) UNIQUE,
         created_at DATE DEFAULT CURRENT_DATE,
         updated_at DATE DEFAULT CURRENT_DATE,
         lot VARCHAR(20),
         unit VARCHAR(20),
-        gearbox uuid,
+        gearbox uuid UNIQUE,
         motor uuid,
         muff_cup uuid,
         FOREIGN KEY(gearbox) 
@@ -482,7 +481,7 @@ CREATE TABLE powertrains (
 CREATE TABLE semi_sprung_assemblies (
         id uuid DEFAULT uuid_generate_v4() PRIMARY KEY,
         semi_sprung_assembly_id VARCHAR(20),
-        emch VARCHAR(20) UNIQUE,
+        
         created_at DATE DEFAULT CURRENT_DATE,
         updated_at DATE DEFAULT CURRENT_DATE,
         lot VARCHAR(20),
@@ -508,7 +507,7 @@ CREATE TABLE semi_sprung_assemblies (
 CREATE TABLE rear_suspension_assemblies (
         id uuid DEFAULT uuid_generate_v4() PRIMARY KEY,
         rear_suspension_assembly_id VARCHAR(20),
-        emch VARCHAR(20) UNIQUE,
+        
         created_at DATE DEFAULT CURRENT_DATE,
         updated_at DATE DEFAULT CURRENT_DATE,
         lot VARCHAR(20),
@@ -530,7 +529,7 @@ CREATE TABLE rear_suspension_assemblies (
 CREATE TABLE driveshaft_assemblies(
         id uuid DEFAULT uuid_generate_v4() PRIMARY KEY,
         driveshaft_assembly_id VARCHAR(20),
-        emch VARCHAR(20) UNIQUE,
+        
         created_at DATE DEFAULT CURRENT_DATE,
         updated_at DATE DEFAULT CURRENT_DATE,
         lot VARCHAR(20),
@@ -548,7 +547,7 @@ CREATE TABLE driveshaft_assemblies(
 CREATE TABLE fork_and_suspension_assemblies (
         id uuid DEFAULT uuid_generate_v4() PRIMARY KEY,
         fork_and_suspension_assembly_id VARCHAR(20),
-        emch VARCHAR(20) UNIQUE,
+        
         created_at DATE DEFAULT CURRENT_DATE,
         updated_at DATE DEFAULT CURRENT_DATE,
         lot VARCHAR(20),
@@ -578,7 +577,7 @@ CREATE TABLE fork_and_suspension_assemblies (
 CREATE TABLE disc_brake_assemblies (
         id uuid DEFAULT uuid_generate_v4() PRIMARY KEY,
         disk_brake_assembly_id VARCHAR(20),
-        emch VARCHAR(20) UNIQUE,
+        
         created_at DATE DEFAULT CURRENT_DATE,
         updated_at DATE DEFAULT CURRENT_DATE,
         lot VARCHAR(20),
@@ -597,7 +596,7 @@ CREATE TABLE disc_brake_assemblies (
 CREATE TABLE rear_wheel_assemblies (
         id uuid DEFAULT uuid_generate_v4() PRIMARY KEY,
         rear_wheel_assembly_id VARCHAR(20),
-        emch VARCHAR(20) UNIQUE,
+        
         created_at DATE DEFAULT CURRENT_DATE,
         updated_at DATE DEFAULT CURRENT_DATE,
         lot VARCHAR(20),
@@ -616,7 +615,7 @@ CREATE TABLE rear_wheel_assemblies (
 CREATE TABLE front_wheel_assemblies (
         id uuid DEFAULT uuid_generate_v4() PRIMARY KEY,
         front_wheel_assembly_id VARCHAR(20),
-        emch VARCHAR(20) UNIQUE,
+        
         created_at DATE DEFAULT CURRENT_DATE,
         updated_at DATE DEFAULT CURRENT_DATE,
         lot VARCHAR(20),
@@ -636,7 +635,7 @@ CREATE TABLE front_wheel_assemblies (
 CREATE TABLE brake_pedal_assemblies  (
         id uuid DEFAULT uuid_generate_v4() PRIMARY KEY,
         brake_pedal_assembly_id VARCHAR(20),
-        emch VARCHAR(20) UNIQUE,
+        
         created_at DATE DEFAULT CURRENT_DATE,
         updated_at DATE DEFAULT CURRENT_DATE,
         lot VARCHAR(20),
@@ -660,7 +659,7 @@ CREATE TABLE brake_pedal_assemblies  (
 CREATE TABLE vehicle_harnesses(
         id uuid DEFAULT uuid_generate_v4() PRIMARY KEY,
         vehicle_harness_id VARCHAR(20),
-        emch VARCHAR(20) UNIQUE,
+        
         created_at DATE DEFAULT CURRENT_DATE,
         updated_at DATE DEFAULT CURRENT_DATE,
         lot VARCHAR(20),
@@ -672,7 +671,7 @@ CREATE TABLE vehicle_harnesses(
 CREATE TABLE marks (
         id uuid DEFAULT uuid_generate_v4() PRIMARY KEY,
         mark_id VARCHAR(20),
-        emch VARCHAR(20) UNIQUE,
+        
         created_at DATE DEFAULT CURRENT_DATE,
         updated_at DATE DEFAULT CURRENT_DATE,
         lot VARCHAR(20),
@@ -685,7 +684,7 @@ CREATE TABLE marks (
 CREATE TABLE battery_assemblies  (
         id uuid DEFAULT uuid_generate_v4() PRIMARY KEY,
         battery_assembly_id VARCHAR(20),
-        emch VARCHAR(20) UNIQUE,
+        
         created_at DATE DEFAULT CURRENT_DATE,
         updated_at DATE DEFAULT CURRENT_DATE,
         lot VARCHAR(20),
@@ -715,7 +714,7 @@ CREATE TABLE battery_assemblies  (
 CREATE TABLE cocktail_box_assemblies (
         id uuid DEFAULT uuid_generate_v4() PRIMARY KEY,
         cocktail_box_assembly_id VARCHAR(20),
-        emch VARCHAR(20) UNIQUE,
+        
         created_at DATE DEFAULT CURRENT_DATE,
         updated_at DATE DEFAULT CURRENT_DATE,
         lot VARCHAR(20),
@@ -753,7 +752,7 @@ CREATE TABLE cocktail_box_assemblies (
 CREATE TABLE Telematics (
         id uuid DEFAULT uuid_generate_v4() PRIMARY KEY,
         telematics_id VARCHAR(20),
-        emch VARCHAR(20) UNIQUE,
+        
         created_at DATE DEFAULT CURRENT_DATE,
         updated_at DATE DEFAULT CURRENT_DATE,
         lot VARCHAR(20),
@@ -763,7 +762,7 @@ CREATE TABLE Telematics (
 CREATE TABLE load_bodies (
         id uuid DEFAULT uuid_generate_v4() PRIMARY KEY,
         load_body_id VARCHAR(20),
-        emch VARCHAR(20) UNIQUE,
+        
         created_at DATE DEFAULT CURRENT_DATE,
         updated_at DATE DEFAULT CURRENT_DATE,
         lot VARCHAR(20),
@@ -780,7 +779,7 @@ CREATE TABLE vehicles (
         lot VARCHAR(20),
         unit VARCHAR(20),
         biw uuid,
-        power_train uuid,
+        power_train uuid UNIQUE,
         semi_sprung_assembly uuid ,
         rear_suspension_assembly uuid,
         driveshaft_assembly uuid,

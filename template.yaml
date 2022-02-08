@@ -114,6 +114,59 @@ Resources:
       DockerContext: ./delete_component
       DockerTag: python3.8-v1
   
+  AddGearBoxFunction:
+    Type: AWS::Serverless::Function # More info about Function Resource: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessfunction
+    Properties:
+      PackageType: Image
+      Architectures:
+        - x86_64
+      Events:
+        DeleteVehicle:
+          Type: Api # More info about API Event Source: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#api
+          Properties:
+            Path: /addgearbox
+            Method: post
+    Metadata:
+      Dockerfile: Dockerfile
+      DockerContext: ./powertrain/add_components/add_gearbox
+      DockerTag: python3.8-v1
+
+  UpdateGearBoxFunction:
+    Type: AWS::Serverless::Function # More info about Function Resource: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessfunction
+    Properties:
+      PackageType: Image
+      Architectures:
+        - x86_64
+      Events:
+        DeleteVehicle:
+          Type: Api # More info about API Event Source: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#api
+          Properties:
+            Path: /updategearbox
+            Method: post
+    Metadata:
+      Dockerfile: Dockerfile
+      DockerContext: ./powertrain/update_components/update_gearbox
+      DockerTag: python3.8-v1
+  
+
+
+  UpdateMotorFunction:
+    Type: AWS::Serverless::Function # More info about Function Resource: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessfunction
+    Properties:
+      PackageType: Image
+      Architectures:
+        - x86_64
+      Events:
+        DeleteVehicle:
+          Type: Api # More info about API Event Source: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#api
+          Properties:
+            Path: /addmotor
+            Method: post
+    Metadata:
+      Dockerfile: Dockerfile
+      DockerContext: ./powertrain/add_components/add_motor
+      DockerTag: python3.8-v1
+  
   
 
 Outputs:
