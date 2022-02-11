@@ -1,6 +1,6 @@
 FROM public.ecr.aws/lambda/python:3.8
 
-COPY see_registered_vehicle_function.py requirements.txt ./
+COPY see_registered_vehicle_function.py requirements.txt table_names.py column_table_relations.py ./
 
 RUN python3.8 -m pip install -r requirements.txt -t .
 

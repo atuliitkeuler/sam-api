@@ -143,7 +143,7 @@ CREATE TABLE upper_and_lower_cones  (
 
 CREATE TABLE fork_2_bearings (
         id uuid DEFAULT uuid_generate_v4() PRIMARY KEY,
-        for_2_bearing_id VARCHAR(20),
+        fork_2_bearing_id VARCHAR(20),
         
         created_at DATE DEFAULT CURRENT_DATE,
         updated_at DATE DEFAULT CURRENT_DATE,
@@ -331,7 +331,7 @@ CREATE TABLE battery_boxes (
 
 CREATE TABLE batteries (
         id uuid DEFAULT uuid_generate_v4() PRIMARY KEY,
-        bettery_id VARCHAR(20),
+        battery_id VARCHAR(20),
         
         created_at DATE DEFAULT CURRENT_DATE,
         updated_at DATE DEFAULT CURRENT_DATE,

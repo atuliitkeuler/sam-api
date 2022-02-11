@@ -26,7 +26,8 @@ def lambda_handler(event, context):
             verification=verify_function(gearbox_id)
             if verification[0]:
 
-                dbquery_1 = """INSERT INTO powertrains(gearbox) SELECT id FROM gearboxes WHERE gearbox_id = (%s)"""
+                dbquery_1 = """INSERT INTO powertrains(gearbox) 
+                                SELECT id FROM gearboxes WHERE gearbox_id = (%s)"""
                 cur.execute(dbquery_1, (gearbox_id,))
                 conn.commit()
 

@@ -51,3 +51,7 @@ tables = [
     "vehicle_harnesses",
     "vehicles",
 ]
+sub_assembly_tables = ['biws', 'powertrains', 'semi_sprung_assemblies', 'rear_suspension_assemblies', 'driveshaft_assemblies', 'fork_and_suspension_assemblies', 'disc_brake_assemblies', 'rear_wheel_assemblies', 'front_wheel_assemblies', 'brake_pedal_assemblies', 'vehicle_harnesses', 'marks', 'battery_assemblies', 'cocktail_box_assemblies', 'telematics', 'load_bodies']
+
+component_tables = ['cocktail_boxes', 'aux_batteries', 'motor_controllers', 'on_board_chargers', 'dc_dcs', 'starks', 'arc_reactor_assemblies', 'cells', 'bmses', 'batteries', 'battery_boxes', 'signal_connectors', 'tmcs', 'reservoirs', 'brake_switches', 'tyres', 'rims', 'tyres', 'rims', 'rotors', 'calipers', 'upper_and_lower_cones', 'fork_2_bearings', 'bottom_links', 'springs', 'struts', 'rear_axles', 'crown_nuts', 'springs', 'struts', 'mounting_rubbers', 'trailing_arms', 'drums', 'brake_plates', 'hub_assemblies', 'gearboxes', 'motors', 'muff_cups']
+

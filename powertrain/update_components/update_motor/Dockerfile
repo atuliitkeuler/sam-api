@@ -1,6 +1,6 @@
 FROM public.ecr.aws/lambda/python:3.8
 
-COPY update_gearbox.py requirements.txt verify_gearbox.py ./
+COPY update_motor.py requirements.txt verify_motor.py ./
 
 RUN python3.8 -m pip install -r requirements.txt -t .
 
